@@ -3,10 +3,10 @@ const app = express();
 const bodyParser = require('body-parser');
 require('dotenv').config();
 const cors = require('cors');
-const EmployeeRoutes = require('./Routes/EmployeeRoutes');
+const EmployeeRoutes = require('./routes/employee.route');
 const PORT = process.env.PORT || 8080;
 
-require('./Models/db');
+require('./models/db');
 app.use(cors());
 app.use(bodyParser.json());
 

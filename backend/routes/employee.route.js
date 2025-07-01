@@ -3,7 +3,7 @@ const { createEmployee,
     getEmployeeById,
     deleteEmployeeById,
     updateEmployeeById
-} = require('../Controllers/employee.controller');
+} = require('../controllers/employee.controller');
 const { cloudinaryFileUploader } = require('../middlewares/FileUploader');
 
 const router = require('express').Router();
