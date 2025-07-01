@@ -1,11 +1,19 @@
-import React from 'react'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import EmployeeManagement from './pages/EmployeeManagement';
+import EmployeeDetails from './pages/EmployeeDetails';
 
-const App = () => {
+function App() {
   return (
     <div>
-      App
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="employee" />} />
+          <Route path="/employee" element={<EmployeeManagement />} />
+          <Route path="/employee/:id" element={<EmployeeDetails />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
